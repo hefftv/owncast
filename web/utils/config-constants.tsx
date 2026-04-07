@@ -449,7 +449,7 @@ export const FRAMERATE_TOOLTIPS = {
 // VIDEO VARIANT FORM - bitrate
 export const VIDEO_BITRATE_DEFAULTS = {
   min: 400,
-  max: 13000,
+  max: 40000,
   defaultValue: 1200,
   unit: 'kbps',
   incrementBy: 100,
@@ -474,6 +474,9 @@ export const VIDEO_BITRATE_SLIDER_MARKS = {
   3000: 3000,
   6000: 6000,
   9000: 9000,
+	12000: 12000,
+	20000: 20000,
+	30000: 30000,
   [VIDEO_BITRATE_DEFAULTS.max]: {
     style: {
       marginLeft: '-10px',
