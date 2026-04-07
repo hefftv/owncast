@@ -91,10 +91,11 @@ export const VideoVariantForm: FC<VideoVariantFormProps> = ({
       .filter(value => !Number.isNaN(value))
       .sort((a, b) => a - b);
 
-    // Current marks: [400, 3000, 6000, 9000, 13000]
-    // Use the second mark (3000) as low threshold and second-to-last (9000) as high threshold
+    // Current marks: [400, 3000, 6000, 9000, 13000, 20000, 30000]
+    // Use the second mark (3000) as low threshold and fourth mark (9000) as high threshold
     // This excludes min/max values and uses intermediate marks for quality categories
     const lowThreshold = marks.length >= 3 ? marks[1] : marks[0];
+		// This line still needs to be check to ensure proper function
     const highThreshold = marks.length >= 4 ? marks[marks.length - 2] : marks[marks.length - 1];
 
     return { lowThreshold, highThreshold };
